@@ -1,0 +1,16 @@
+// message-trace.kql
+// Table expected: MsgTrace (imported from evidence/cloudora_msgtrace_logs.csv)
+// Purpose: confirm delivery scope and identify the common sending infrastructure.
+
+// 1. Full delivery breakdown by status
+MsgTrace
+| summarize Count = count() by Status
+
+// 2. All recipients and their delivery outcome, most recent first
+MsgTrace
+| project Timestamp, SenderAddress, RecipientAddress, Status, SourceIP
+| order by Timestamp desc
+
+// 3. Confirm a single-source campaign (one sending IP across all messages)
+MsgTrace
+| summarize RecipientCount = dcount(RecipientAddress) by SourceIP, SenderAddress

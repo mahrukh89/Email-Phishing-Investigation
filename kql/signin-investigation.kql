@@ -1,0 +1,33 @@
+// signin-investigation.kql
+// Tables expected: SigninLogs (from evidence/cloudora_entra_signin_logs.csv)
+//                  ClickDelivery (from evidence/cloudora_click_delivery_logs.csv)
+// Purpose: correlate phishing clicks to sign-in activity and confirm compromise.
+
+// 1. All sign-ins for a specific user, most recent first
+SigninLogs
+| where UserPrincipalName == "employee03@cloudora.example"
+| order by TimeGenerated desc
+
+// 2. Simplified "impossible travel" check — sign-ins from a location
+//    that differs from the user's most common location
+SigninLogs
+| summarize LocationCount = count() by UserPrincipalName, Location
+| summarize Locations = make_list(Location) by UserPrincipalName
+| where array_length(Locations) > 1
+
+// 3. Core correlation query — join clicks to sign-ins within a 15-minute window
+ClickDelivery
+| where Clicked == "YES"
+| join kind=inner (SigninLogs) on $left.Recipient == $right.UserPrincipalName
+| where TimeGenerated between (ClickTimestamp .. ClickTimestamp + 15m)
+| project Recipient, ClickTimestamp, ClickSourceIP, TimeGenerated, IPAddress,
+          Location, ConditionalAccessStatus, ResultDescription
+| order by ClickTimestamp asc
+
+// 4. Flag likely account takeover: successful sign-in, anomalous location,
+//    no enforced MFA
+SigninLogs
+| where ResultType == 0
+| where Location != "US - Chicago"
+| where ConditionalAccessStatus != "mfaRequired"
+| project TimeGenerated, UserPrincipalName, IPAddress, Location, AppDisplayName

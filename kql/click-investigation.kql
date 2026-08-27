@@ -1,0 +1,19 @@
+// click-investigation.kql
+// Table expected: ClickDelivery (imported from evidence/cloudora_click_delivery_logs.csv)
+// Purpose: identify which recipients engaged with the malicious link.
+
+// 1. Everyone who clicked, ordered by time
+ClickDelivery
+| where Clicked == "YES"
+| project Recipient, ClickTimestamp, ClickSourceIP, ClickUserAgent
+| order by ClickTimestamp asc
+
+// 2. Click rate across all delivered recipients
+ClickDelivery
+| summarize Total = count(), Clicked = countif(Clicked == "YES")
+| extend ClickRatePct = round(100.0 * Clicked / Total, 1)
+
+// 3. Confirm clicks share the same attacker-controlled IP
+ClickDelivery
+| where Clicked == "YES"
+| summarize RecipientCount = dcount(Recipient) by ClickSourceIP
