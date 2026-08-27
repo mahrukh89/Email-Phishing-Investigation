@@ -81,6 +81,9 @@ Cloudora-Phishing-Investigation/
 │
 └── report/
     └── INCIDENT_REPORT.md          <- final polished incident report
+├── generate_dataset.py                # Script used to generate the synthetic log datasets
+├── .gitignore
+└── LICENSE
 ```
 
 ## 🧭 How to read this repo
