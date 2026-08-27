@@ -1,0 +1,51 @@
+X-Simulation-Notice: THIS IS A SYNTHETIC / FICTIONAL EMAIL CREATED FOR A CYBERSECURITY TRAINING LAB. NO REAL ORGANIZATION, PERSON, OR DOMAIN IS INVOLVED.
+Return-Path: <bounce@cloudora-hr.example>
+Received: from mail-relay-09.cloudora-hr.example (mail-relay-09.cloudora-hr.example [203.0.113.44])
+	by mx1.cloudora.example (Postfix) with ESMTPS id 7F3A21C0021
+	for <employee03@cloudora.example>; Mon, 24 Aug 2026 09:38:41 +0000 (UTC)
+Authentication-Results: mx1.cloudora.example;
+	spf=softfail (sender IP is 203.0.113.44) smtp.mailfrom=cloudora-hr.example;
+	dkim=fail (signature did not verify) header.d=cloudora-hr.example;
+	dmarc=fail (p=none, dis=none) header.from=cloudora-hr.example
+Received-SPF: softfail (mx1.cloudora.example: transitioning domain of cloudora-hr.example does not designate 203.0.113.44 as permitted sender)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=cloudora-hr.example;
+	s=selector1; h=from:to:subject:date:message-id;
+	bh=fakebase64hashvalue0000000000000000000000=;
+	b=invaliddkimsignaturevalueforlabpurposesonly0000000000000000000000000
+From: "Cloudora Payroll Services" <payroll@cloudora-hr.example>
+Reply-To: "Payroll Support" <support@cloudora-hr.example>
+To: employee03@cloudora.example
+Subject: Payroll Update - Action Required Before 5:00 PM Today
+Date: Mon, 24 Aug 2026 09:38:40 +0000
+Message-ID: <9f3c1a2e-4b7d-4e21-9a0c-2d5f6b8e7a11@cloudora-hr.example>
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+X-Mailer: BulkMailerPro/3.1 (not a real product)
+
+<html>
+<body style="font-family:Arial, sans-serif; color:#222;">
+<p>Dear Employee,</p>
+
+<p>Our records indicate that your direct deposit information could not be
+verified during this month's payroll cycle. To avoid a delay in your next
+payment, please confirm your details using the secure link below.</p>
+
+<p style="text-align:center;">
+  <a href="https://cloudora-hr-verify.example/portal/login?ref=9f3c1a2e"
+     style="background:#1a73e8;color:#fff;padding:10px 20px;text-decoration:none;border-radius:4px;">
+     Review Payroll Details
+  </a>
+</p>
+
+<p>This link will expire at 5:00 PM today. Failure to verify your
+information may result in a delay of your payroll deposit.</p>
+
+<p>Thank you,<br/>
+Cloudora Payroll Services</p>
+
+<p style="font-size:11px;color:#888;">
+This message and any links contained within it are part of a SIMULATED
+PHISHING TRAINING EXERCISE and do not represent a real organization.
+</p>
+</body>
+</html>

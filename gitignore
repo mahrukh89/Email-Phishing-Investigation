@@ -1,0 +1,54 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+ENV/
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+
+# ===== OS files =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== Editor / IDE =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== Logs & temp files =====
+*.log
+*.tmp
+*.temp
+*.bak
+
+# ===== Environment / secrets =====
+.env
+.env.*
+*.pem
+*.key
+secrets.json
+
+# ===== Generated/large data (uncomment if you don't want to commit generated CSVs) =====
+# evidence/*.csv
+
+# ===== Compressed / archive files =====
+*.zip
+*.tar.gz
+*.rar
+
+# ===== Misc =====
+.cache/
+*.pid
