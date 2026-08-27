@@ -1,0 +1,7 @@
+MessageId,Timestamp,SenderAddress,RecipientAddress,Subject,Status,SizeKB,SourceIP
+9f3c1a2e-4b7d-4e21-9a0c-2d5f6b8e7a11@cloudora-hr.example,2026-08-24T09:38:41Z,payroll@cloudora-hr.example,employee01@cloudora.example,Payroll Update - Action Required Before 5:00 PM Today,Delivered,42,203.0.113.44
+9f3c1a2e-4b7d-4e21-9a0c-2d5f6b8e7a12@cloudora-hr.example,2026-08-24T09:38:43Z,payroll@cloudora-hr.example,employee02@cloudora.example,Payroll Update - Action Required Before 5:00 PM Today,Delivered,42,203.0.113.44
+9f3c1a2e-4b7d-4e21-9a0c-2d5f6b8e7a13@cloudora-hr.example,2026-08-24T09:38:44Z,payroll@cloudora-hr.example,employee03@cloudora.example,Payroll Update - Action Required Before 5:00 PM Today,Delivered,42,203.0.113.44
+9f3c1a2e-4b7d-4e21-9a0c-2d5f6b8e7a14@cloudora-hr.example,2026-08-24T09:38:46Z,payroll@cloudora-hr.example,employee04@cloudora.example,Payroll Update - Action Required Before 5:00 PM Today,Delivered,42,203.0.113.44
+9f3c1a2e-4b7d-4e21-9a0c-2d5f6b8e7a15@cloudora-hr.example,2026-08-24T09:38:47Z,payroll@cloudora-hr.example,employee05@cloudora.example,Payroll Update - Action Required Before 5:00 PM Today,Delivered,42,203.0.113.44
+9f3c1a2e-4b7d-4e21-9a0c-2d5f6b8e7a16@cloudora-hr.example,2026-08-24T09:38:49Z,payroll@cloudora-hr.example,employee06@cloudora.example,Payroll Update - Action Required Before 5:00 PM Today,FilteredAsSpam,42,203.0.113.44

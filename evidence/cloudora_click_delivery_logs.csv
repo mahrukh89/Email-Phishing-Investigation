@@ -1,0 +1,6 @@
+Recipient,Delivered,Clicked,ClickTimestamp,ClickSourceIP,ClickUserAgent
+employee01@cloudora.example,YES,NO,,,
+employee02@cloudora.example,YES,YES,2026-08-24T09:44:12Z,198.51.100.77,Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+employee03@cloudora.example,YES,YES,2026-08-24T09:41:03Z,198.51.100.77,Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+employee04@cloudora.example,YES,NO,,,
+employee05@cloudora.example,YES,NO,,,

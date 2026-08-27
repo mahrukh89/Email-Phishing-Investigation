@@ -1,0 +1,11 @@
+TimeGenerated,UserPrincipalName,IPAddress,Location,AppDisplayName,ClientApp,ConditionalAccessStatus,ResultType,ResultDescription
+2026-08-24T08:02:11Z,employee01@cloudora.example,10.20.1.15,US - Chicago,Microsoft 365 Portal,Browser,success,0,Success
+2026-08-24T08:05:44Z,employee02@cloudora.example,10.20.1.22,US - Chicago,Microsoft 365 Portal,Browser,success,0,Success
+2026-08-24T08:09:02Z,employee03@cloudora.example,10.20.1.31,US - Chicago,Microsoft 365 Portal,Browser,success,0,Success
+2026-08-24T08:12:37Z,employee04@cloudora.example,10.20.1.40,US - Chicago,Microsoft 365 Portal,Browser,success,0,Success
+2026-08-24T08:15:19Z,employee05@cloudora.example,10.20.1.48,US - Chicago,Microsoft 365 Portal,Browser,success,0,Success
+2026-08-24T09:44:55Z,employee02@cloudora.example,198.51.100.77,RO - Bucharest,Office 365 Exchange Online,Browser,mfaRequired,50074,Failure - MFA not satisfied
+2026-08-24T09:41:47Z,employee03@cloudora.example,198.51.100.77,RO - Bucharest,Office 365 Exchange Online,Browser,notApplied,0,Success
+2026-08-24T09:43:20Z,employee03@cloudora.example,198.51.100.77,RO - Bucharest,Microsoft 365 Portal,Browser,notApplied,0,Success
+2026-08-24T09:50:02Z,employee03@cloudora.example,198.51.100.77,RO - Bucharest,Exchange Online PowerShell,Other clients,notApplied,0,Success
+2026-08-24T10:05:33Z,employee03@cloudora.example,10.20.1.31,US - Chicago,Microsoft 365 Portal,Browser,success,0,Success
