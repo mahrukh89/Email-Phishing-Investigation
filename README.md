@@ -81,6 +81,10 @@ Cloudora-Phishing-Investigation/
 │
 └── report/
     └── INCIDENT_REPORT.md          <- final polished incident report
+├── generate_dataset.py
+│
+├── .gitignore
+└── LICENSE
 ```
 
 ## 🧭 How to read this repo
